@@ -1,0 +1,16 @@
+services:
+  trivy:
+    image: aquasec/trivy:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - trivy-cache:/root/.cache/trivy
+      - ./reports:/reports
+    command: >
+      sh -c "
+        trivy image --format json --output /reports/nginx-1.14.json nginx:1.14 &&
+        trivy image --format json --output /reports/python-3.6-slim.json python:3.6-slim &&
+        echo 'Scan complete. Reports saved to ./reports/'
+      "
+
+volumes:
+  trivy-cache:
