@@ -69,22 +69,9 @@ This scans `nginx:1.14` and `python:3.6-slim` and writes results to `reports/`.
 
 ## 5. Expected Output
 
-```
-trivy-demo-trivy-1  | 2026-04-15T10:00:00Z INFO Vulnerability scanning is enabled
-trivy-demo-trivy-1  | 2026-04-15T10:00:01Z INFO Secret scanning is enabled
-trivy-demo-trivy-1  |
-trivy-demo-trivy-1  | python:3.6-slim (debian 9.13)
-trivy-demo-trivy-1  | ===========================
-trivy-demo-trivy-1  | Total: 368 (UNKNOWN: 2, LOW: 65, MEDIUM: 144, HIGH: 107, CRITICAL: 50)
-trivy-demo-trivy-1  |
-trivy-demo-trivy-1  | ┌──────────────┬────────────────┬──────────┬───────────────────┬───────────────┬─────────────────────────────────────┐
-trivy-demo-trivy-1  | │   Library    │ Vulnerability  │ Severity │ Installed Version │ Fixed Version │               Title                 │
-trivy-demo-trivy-1  | ├──────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────┤
-trivy-demo-trivy-1  | │ openssl      │ CVE-2019-1543  │ CRITICAL │ 1.1.0l-1~deb9u1   │               │ openssl: ChaCha20-Poly1305 nonce... │
-trivy-demo-trivy-1  | └──────────────┴────────────────┴──────────┴───────────────────┴───────────────┴─────────────────────────────────────┘
-```
+![Trivy Scan Output](screenshots/trivy-output.png)
 
-JSON reports are written to `reports/<image-name>.json`.
+Trivy detects the OS, scans for vulnerabilities and secrets in both images. Full JSON reports are written to `reports/nginx-1.14.json` and `reports/python-3.6-slim.json`.
 
 ---
 
