@@ -28,7 +28,7 @@ for IMAGE in "${IMAGES[@]}"; do
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v trivy-cache:/root/.cache/trivy \
     -v "$(pwd)/$REPORT_DIR:/reports" \
-    aquasec/trivy:latest image \
+    ghcr.io/aquasecurity/trivy:latest image \
       --format json \
       --output "/reports/${SAFE_NAME}.json" \
       "$IMAGE"

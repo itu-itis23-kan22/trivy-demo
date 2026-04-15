@@ -1,6 +1,6 @@
 services:
   trivy:
-    image: aquasec/trivy:latest
+    image: ghcr.io/aquasecurity/trivy:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - trivy-cache:/root/.cache/trivy

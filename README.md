@@ -30,13 +30,13 @@ Clone the repository and pull the Trivy image:
 ```bash
 git clone https://github.com/<your-username>/trivy-demo.git
 cd trivy-demo
-docker pull aquasec/trivy:latest
+docker pull ghcr.io/aquasecurity/trivy:latest
 ```
 
 Verify the installation:
 
 ```bash
-docker run --rm aquasec/trivy:latest --version
+docker run --rm ghcr.io/aquasecurity/trivy:latest --version
 ```
 
 ---
@@ -46,7 +46,7 @@ docker run --rm aquasec/trivy:latest --version
 ### Quick scan — single image
 
 ```bash
-docker run --rm aquasec/trivy:latest image python:3.6-slim
+docker run --rm ghcr.io/aquasecurity/trivy:latest image python:3.6-slim
 ```
 
 ### Full demo — scan multiple images and save JSON reports
