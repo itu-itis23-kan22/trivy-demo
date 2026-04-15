@@ -28,7 +28,7 @@ No additional software or paid licence required.
 Clone the repository and pull the Trivy image:
 
 ```bash
-git clone https://github.com/<your-username>/trivy-demo.git
+git clone https://github.com/itu-itis23-kan22/trivy-demo.git
 cd trivy-demo
 docker pull ghcr.io/aquasecurity/trivy:latest
 ```
